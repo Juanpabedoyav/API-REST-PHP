@@ -1,8 +1,6 @@
 <?php 
-
-define('URL', 'http://localhost/php-api');
-
-define('HOST' , 'localhost');
+define('URL', 'http://api.v1.com/');
+define('HOST' , 'api.v1.com');
 define('USER', 'root');
 define('PASSWORD', '');
 define('DB', 'database-1');
