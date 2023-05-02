@@ -1,8 +1,8 @@
 <?php 
 require_once('models/getModel.php');
 class GetController{
-     static public function getData($table){
-        $response = GetModel::getData($table);
+     static public function getData($table, $param){
+        $response = GetModel::getData($table, $param);
         $return = new GetController();
         $return->manage_response($response);
     }
