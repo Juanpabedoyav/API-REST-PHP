@@ -17,12 +17,9 @@ if(empty($routes)){
 }
 if(!empty($routes) && isset($requestMethod)){
   if($requestMethod == 'GET'){
-    $json = array(
-      'status' => 200,
-      'message' => 'GET'
-    );
-    echo json_encode($json, http_response_code($json['status']));
+    include_once('routes/service/get.php');
   }
+  
   if($requestMethod == 'POST'){
     $json = array(
       'status' => 200,

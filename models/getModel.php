@@ -1,11 +1,13 @@
 <?php 
 class GetModel extends DB {
     
-    static function get($table){
+    static public function getData($table){
         $sql = "SELECT * FROM $table";
-        $stmt = new DB(); 
-        $stmt->query($sql);
-        return $stmt;
+        $db = new DB();
+        $stmt = $db->prepare($sql);
+        $stmt->execute();
+        error_log('GET DATA MODEL table '. $table);
+        return $stmt->fetchAll(PDO::FETCH_CLASS);
     }
 
 
