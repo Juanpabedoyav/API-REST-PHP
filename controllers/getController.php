@@ -7,6 +7,11 @@ class GetController{
         $return->manage_response($response);
     }
 
+     static public function getFilter($table, $param, $linkTo, $equalTo){
+        $response = GetModel::getFilter($table, $param, $linkTo, $equalTo);
+        $return = new GetController();
+        $return->manage_response($response);
+     }   
     public function manage_response($response){
         if(!empty($response)){
             $json = array(
